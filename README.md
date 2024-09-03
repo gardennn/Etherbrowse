@@ -74,4 +74,4 @@ etherbrowse/
 
 **The application is deployed and accessible at the following URL::**
 
-- **Online Environment:** [Etherbrowse]https://etherbrowse.vercel.app/
+- **Online Environment:** [Etherbrowse](https://etherbrowse.vercel.app/)
