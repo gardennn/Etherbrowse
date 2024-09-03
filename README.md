@@ -39,10 +39,10 @@ This is a simple Ethereum search tool built with React. Users can search for wal
 
    - Create a `.env` file at the root of the project.
    - Add the following environment variables:
-     ```
-     REACT_APP_ETHERSCAN_API_KEY=<Your Etherscan API Key>
-    REACT_APP_INFURA_PROJECT_ID=<Your Infura Project ID>
-     ```
+   ```
+   REACT_APP_ETHERSCAN_API_KEY=<Your Etherscan API Key>
+   REACT_APP_INFURA_PROJECT_ID=<Your Infura Project ID>
+   ```
 
 4. **Start the Server:**
 
