@@ -14,7 +14,7 @@ const AccountPage = () => {
     firstDaysAgo: null,
     fundedBy: null,
   });
-
+  const [loading, setLoading] = useState(true);  // 添加加载状态
   const hasFetchedData = useRef(false);
 
   useEffect(() => {
@@ -25,17 +25,24 @@ const AccountPage = () => {
     hasFetchedData.current = true;
 
     const fetchData = async () => {
-      const accountBalance = await getAccountBalance(address);
-      setBalance(accountBalance);
+      setLoading(true);  // 开始加载
+      try {
+        const accountBalance = await getAccountBalance(address);
+        setBalance(accountBalance);
 
-      const recentTransactions = await getRecentTransactions(address);
-      setTransactions(recentTransactions);
+        const recentTransactions = await getRecentTransactions(address);
+        setTransactions(recentTransactions);
 
-      const rate = await getEthToUsdRate();
-      setEthToUsdRate(rate);
+        const rate = await getEthToUsdRate();
+        setEthToUsdRate(rate);
 
-      const details = await getAccountDetails(address);
-      setAccountDetails(details);
+        const details = await getAccountDetails(address);
+        setAccountDetails(details);
+      } catch (error) {
+        console.error("Error fetching account data:", error);
+      } finally {
+        setLoading(false);  // 完成加载
+      }
     };
 
     fetchData();
@@ -44,6 +51,14 @@ const AccountPage = () => {
   const truncateAddress = (addr) => {
     return addr ? `${addr.slice(0, 10)}...${addr.slice(-8)}` : '';
   };
+
+  if (loading) {
+    return (
+      <div className="loader-container">
+        <div className="loader"></div>
+      </div>
+    );  // 显示加载动画
+  }
 
   return (
     <div className="account-page-container">

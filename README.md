@@ -25,7 +25,7 @@ This is a simple Ethereum search tool built with React. Users can search for wal
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/
+   git clone https://github.com/gardennn/Etherbrowse.git
    ```
 
 2. **Install Dependencies:**
@@ -74,4 +74,4 @@ etherbrowse/
 
 **The application is deployed and accessible at the following URL::**
 
-- **Online Environment:** [Etherbrowse]https://your-deployed-app-url.com
+- **Online Environment:** [Etherbrowse]https://etherbrowse.vercel.app/
