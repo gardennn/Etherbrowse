@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply min-h-screen bg-cover bg-center bg-no-repeat;
+  background-image: url('../public/background.jpg');
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* HomePage */
+.home-container {
+  @apply flex flex-col items-center justify-center min-h-screen;
+}
+
+.home-title-container {
+  @apply flex items-center mb-10;
+}
+
+.home-logo {
+  @apply w-20 h-20 mr-4;
+}
+
+.home-title {
+  @apply text-7xl font-bold;
+}
+
+.home-description {
+  @apply text-lg mb-20;
+}
+
+/* SearchBar */
+.search-bar-container {
+  @apply w-full max-w-md mx-auto flex items-center bg-white rounded-xl p-1;
+}
+
+.search-bar-input {
+  @apply flex-grow ml-1 p-2 bg-white border-none rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500; 
+}
+
+.search-bar-button {
+  @apply ml-2 p-3 bg-blue-500 text-white rounded-xl hover:bg-blue-600 flex items-center justify-center; 
+}
+
+.search-icon {
+  @apply w-6 h-6;
+}
+
+/* AccountPage Container */
+.account-page-container {
+  @apply max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-10;
+}
+
+/* AccountInfo Container */
+.account-info-container {
+  @apply bg-white p-6 rounded-lg shadow mb-6 flex justify-between items-center;
+}
+
+.account-info-left {
+  @apply flex flex-col;
+}
+
+.account-info-header {
+  @apply text-3xl font-semibold text-gray-900;
+}
+
+.account-info-balance {
+  @apply text-xl text-gray-600;
+}
+
+.eth-value {
+  @apply text-sm text-gray-500;
+}
+
+.token-holdings {
+  @apply text-sm text-gray-500 mt-2;
+}
+
+/* More Info Container */
+.more-info-container {
+  @apply bg-white p-6 rounded-lg shadow mb-6 flex flex-col;
+}
+
+.more-info-header {
+  @apply text-lg font-semibold text-gray-800 mb-2;
+}
+
+.more-info-content {
+  @apply text-sm text-gray-600;
+}
+
+/* RecentTransactions Container */
+.recent-transactions-header-container {
+  @apply flex justify-between items-center mb-4;
+}
+
+.recent-transactions-header {
+  @apply text-xl font-semibold text-gray-900;
+}
+
+.txn-fee-header {
+  @apply text-lg font-semibold text-gray-600 mr-6;
+}
+
+.recent-transactions-list {
+  @apply list-none;
+}
+
+.recent-transaction-item {
+  @apply flex justify-between items-center py-2 border-b border-gray-200;
+}
+
+.recent-transaction-link {
+  @apply text-blue-500 hover:text-blue-700;
+}
+
+.transaction-details {
+  @apply text-sm text-gray-600;
+}
+
+/* Pagination Controls */
+.pagination-controls {
+  @apply flex justify-end mt-4;
+}
+
+.pagination-box {
+  @apply flex items-center space-x-2;
+}
+
+.pagination-arrow-container,
+.pagination-info-container {
+  @apply bg-white border border-gray-300 py-1 px-2 rounded-lg flex items-center justify-center;
+}
+
+.pagination-arrow {
+  @apply text-gray-700 hover:text-gray-500;
+}
+
+.pagination-arrow[disabled] {
+  @apply opacity-50 cursor-not-allowed; 
+}
+
+.pagination-info {
+  @apply text-sm text-gray-700 font-medium;
+}
+
+.pagination-arrow img {
+  @apply h-5 w-5; 
+}
+
+/* General Buttons */
+.button {
+  @apply bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600;
+}
+
+.button-outline {
+  @apply border border-blue-500 text-blue-500 py-2 px-4 rounded hover:bg-blue-50;
+}
+
+/* Transaction Info Container */
+.transaction-info-container {
+  @apply bg-white shadow-lg rounded-lg p-6 mb-6 max-w-4xl mx-auto mt-10;
+}
+
+/* Section Title */
+.section-title {
+  @apply text-2xl font-semibold mb-6;
+}
+
+/* Details Grid Layout */
+.transaction-details {
+  @apply grid grid-cols-1 gap-4;
+}
+
+/* Detail Item */
+.detail-item {
+  @apply flex justify-between items-center py-2 border-b border-gray-200;
+}
+
+.detail-item-last {
+  @apply flex justify-between items-center py-2;
+}
+/* Label */
+.label {
+  @apply text-gray-600 font-medium;
+}
+
+/* Value */
+.value {
+  @apply text-gray-900 font-mono;
+}
+
+/* Status */
+.status-success {
+  @apply text-green-500 font-semibold;
+}
+
+.status-failed {
+  @apply text-red-500 font-semibold;
+}
+
+.status-pending {
+  @apply text-yellow-500 font-semibold;
+}
+
+/* Link Styles */
+.link {
+  @apply text-blue-600 hover:underline cursor-pointer;
+}
+
+/* More Details */
+.more-details {
+  @apply mt-4 text-center;
+}
