@@ -11,7 +11,7 @@ const SearchBar = () => {
     } else if (input.startsWith('0x') && input.length === 66) {
       navigate(`/transaction/${input}`);
     } else {
-      alert('请输入有效的钱包地址或交易哈希');
+      alert('請輸入有效 Account Address 或 Txn Hash');
     }
   };
 

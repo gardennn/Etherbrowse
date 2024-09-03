@@ -8,7 +8,6 @@ const HomePage = () => {
         <img src="/block.svg" alt="Ethereum Logo" className="home-logo" />
         <h1 className="home-title">Etherbrowse</h1>
       </div>
-      {/* <p className="home-description">Explore Ethereum Blockchain</p> */}
       <SearchBar />
     </div>
   );

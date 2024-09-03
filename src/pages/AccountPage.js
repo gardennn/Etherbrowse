@@ -14,7 +14,7 @@ const AccountPage = () => {
     firstDaysAgo: null,
     fundedBy: null,
   });
-  const [loading, setLoading] = useState(true);  // 添加加载状态
+  const [loading, setLoading] = useState(true);
   const hasFetchedData = useRef(false);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const AccountPage = () => {
     hasFetchedData.current = true;
 
     const fetchData = async () => {
-      setLoading(true);  // 开始加载
+      setLoading(true);  
       try {
         const accountBalance = await getAccountBalance(address);
         setBalance(accountBalance);
@@ -41,7 +41,7 @@ const AccountPage = () => {
       } catch (error) {
         console.error("Error fetching account data:", error);
       } finally {
-        setLoading(false);  // 完成加载
+        setLoading(false); 
       }
     };
 
@@ -57,7 +57,7 @@ const AccountPage = () => {
       <div className="loader-container">
         <div className="loader"></div>
       </div>
-    );  // 显示加载动画
+    );
   }
 
   return (
