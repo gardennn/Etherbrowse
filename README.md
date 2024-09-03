@@ -1,4 +1,4 @@
-# Etherbrose
+# Etherbrowse
 
 ## Ethereum Search Tool
 
